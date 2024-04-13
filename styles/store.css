@@ -1,0 +1,83 @@
+.lobster-two-regular {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lobster-two-bold {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lobster-two-regular-italic {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lobster-two-bold-italic {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+body{
+  margin-top: 100px;
+}
+
+.homestore, .accountinfo {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.accountinfo {
+  float: right;
+}
+
+nav {
+  background-color: black;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav a {
+  display: inline-block;
+  font-size: xx-large;
+  color: white;
+  margin: .5rem;
+}
+
+.card {
+  border: 3px solid black;
+  width: 15rem;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.card-img-top {
+  border: 3px solid grey;
+  border-radius: 4rem;
+  height: 30vh;
+  object-fit: contain;
+}
+
+.cardlist {
+  text-align: center;
+}
+
+.card-text {
+  padding: 8px;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.toplist, .bottomlist {
+  display: flex;
+  justify-content: space-evenly
+}
+
