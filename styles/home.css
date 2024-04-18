@@ -28,9 +28,11 @@
     'FILL' 0,
     'wght' 400,
     'GRAD' 0,
-    'opsz' 24
+    'opsz' 24, ;
 }
+
 body {
+  font-family:Georgia, 'Times New Roman', Times, serif;
   margin-top: 70px;
 }
 
@@ -40,7 +42,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 57px;
+  height: 70px;
   z-index: 1000;
 }
 
@@ -49,6 +51,10 @@ nav a {
   color: white;
   margin: .5rem;
   text-decoration: none;
+}
+
+a:hover {
+  color: grey;
 }
 
 .nav__elements {
@@ -65,11 +71,87 @@ nav a {
   align-items: center;
 }
 
-#magnifyicon, #carticon {
+#carticon, #magnifyicon{
   font-size: xx-large;
 }
 
 .cart {
   float: right;
   margin-top: 3px;
+}
+
+.search input {
+  min-height: 25px;
+  height: 4vh;
+  width: 25vw;
+}
+
+canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#toplayer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 30vh;
+}
+  #toplayer h2 {
+  width: 212.39px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 3rem;
+  z-index: 2;
+
+  }
+
+.modalbuttons span {
+  font-size: 10vw;
+}
+
+.modalbuttons button {
+  height: 15vw;
+  width: 15vw;
+
+}
+
+.modalbuttons {
+  display: flex;
+  justify-content: space-around;
+  height: 25vh;
+  width: 100vw;
+}
+
+.modal-body {
+  font-size:x-large;
+}
+.modal-body ol, .modal-body p{
+  text-align: center;
+}
+.modal-header, .modal-footer {
+ display: flex;
+ justify-content: center;
+}
+
+.modal-dialog{
+margin-top: 125px;
+}
+
+
+#imgbody {
+  display: grid;
+  place-items: center;
+	grid-template-columns: repeat(auto-fit, minmax(8ch, 1fr));
+	width: 100%;
+}
+.img-img {
+border: 3px solid rgb(0, 0, 0);
+border-radius: 4rem;
+height: 20vh;
+width: 100%;
+object-fit: contain;
 }

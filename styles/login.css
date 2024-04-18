@@ -1,106 +1,136 @@
 .lobster-two-regular {
-    font-family: "Lobster Two", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .lobster-two-bold {
-    font-family: "Lobster Two", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .lobster-two-regular-italic {
-    font-family: "Lobster Two", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .lobster-two-bold-italic {
-    font-family: "Lobster Two", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .material-symbols-outlined {
-    color: white;
-    font-variation-settings:
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lobster-two-bold {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lobster-two-regular-italic {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lobster-two-bold-italic {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.material-symbols-outlined {
+  color: white;
+  font-variation-settings:
       'FILL' 0,
       'wght' 400,
       'GRAD' 0,
-      'opsz' 24
-  }
-  body {
-    margin-top: 70px;
-  }
-  
-  nav {
-    background-color: black;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 57px;
-    z-index: 1000;
-  }
-  
-  nav a {
-    font-size: xx-large;
-    color: white;
-    margin: .5rem;
-    text-decoration: none;
-  }
+      'opsz' 24, ;
+}
 
-  a:hover {
-    color: grey;
-  }
-  
-  .nav__elements {
-    display: flex;
-    justify-content: space-between;
-    align-items: center
-  }
-  
-  .homestore,
-  .accountinfo,
-  .searchbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .searchbar {
-    margin-left: 70px;
-  }
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 70px;
+}
 
-  #magnifyicon, #carticon {
-    font-size: xx-large;
-  }
-  
-  .cart {
-    float: right;
-    margin-top: 3px;
-  }
+nav {
+  background-color: black;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1001; /* Updated z-index value */
+}
 
-  h1 {
-    text-align: center;
-    font-size: 13vh;
-    margin-bottom: 10vh;
-  }
+nav a {
+  font-size: xx-large;
+  color: white;
+  margin: .5rem;
+  text-decoration: none;
+}
 
-  .logininfo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .logininfo form {
-    padding: 15px;
-    border: 4px black solid;
-    text-align: center;
-    box-shadow: 10px 7px;
-  }
+a:hover {
+  color: grey;
+}
 
-  #rememberme {
-    float: initial;
-  }
+.nav__elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homestore,
+.accountinfo,
+.searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#carticon,
+#magnifyicon {
+  font-size: xx-large;
+}
+
+.cart {
+  float: right;
+  margin-top: 3px;
+}
+
+.search input {
+  min-height: 25px;
+  height: 4vh;
+  width: 25vw;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.search input {
+  min-height: 25px;
+  height: 4vh;
+  width: 25vw;
+}
+
+h1 {
+  text-align: center;
+  font-size: 13vh;
+  margin-bottom: 10vh;
+}
+
+.logininfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Updated z-index value */
+}
+
+.logininfo form {
+  background-color: white;
+  padding: 15px;
+  border: 4px black solid;
+  text-align: center;
+  box-shadow: 10px 7px;
+  z-index: 2; /* Updated z-index value */
+}
+
+.col-md .input-group {
+  padding: 10px;
+}
+.heading {
+  z-index: 1; /* Set z-index value for the heading */
+}
+
+#rememberme {
+  float: initial;
+}

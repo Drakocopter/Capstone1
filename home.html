@@ -2,6 +2,7 @@
 <html lang="en">
 
 <!-- Notes: makes the magnifyicon interactible and have it pull down a dropdown menu with a list of example items -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/styles/home.css">
-    <script src="/scripts/index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,9 +19,13 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/styles/home.css">
 </head>
 
 <body>
+    <canvas>
+    </canvas>
+    <!-- Nav Bar -->
     <header class="lobster-two-regular">
         <nav class="nav__elements">
             <section class="homestore">
@@ -46,12 +49,131 @@
             </section>
         </nav>
     </header>
-    <article class="lobster-two-regular">
-        <h1>Welcome!</h1>
-        <h3>This is my webstore! I hope you enjoy your time here. The items listed are items of my own personal wishlist
-            (barring a few exceptions).Click on the Store button in the top left to see the products. </h3>
-    </article>
-    <footer>&copy;</footer>
+    <!-- Modals -->
+    <!-- Welcome Modal -->
+    <div class="modal fade" id="welcomemodal" tabindex="-1" aria-labelledby="welcomemodallabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" id="modal-header">
+                    <h1 class="modal-title fs-1" id="welcome">Welcome!</h1>
+                </div>
+                <div class="modal-body">
+                    Welcome to my website! Click on the other buttons to learn more about my product store!
+                </div>
+                <div class="modal-footer" id="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Description Modal -->
+    <div class="modal fade" id="descriptionmodal" tabindex="-1" aria-labelledby="descriptionmodallabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" id="modal-header">
+                    <h1 class="modal-title fs-1" id="description">Description</h1>
+                </div>
+                <div class="modal-body">
+                    This website poses as a product page for electronical musical equipment, such as keyboards,
+                    microphones, and speakers. Most of these items I would like to have myself,
+                    so you can consider it my own personal wishlist. It took me a great amount of effort to get
+                    the
+                    styling right, but I still had fun. It was like a puzzle.
+                    <br>
+                    <br>
+                    Click on the next two buttons to see the list of the items and images, or go to the navigation
+                    bar
+                    at the top to explore the different areas of the website. Thank you for visiting! I hope you
+                    enjoy!
+                </div>
+                <div class="modal-footer" id="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- List Modal -->
+    <div class="modal fade" id="listmodal" tabindex="-1" aria-labelledby="listmodallabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" id="modal-header">
+                    <h1 class="modal-title fs-1" id="list">List of Items</h1>
+                </div>
+                <div class="modal-body">
+                    <p>Sorted by Price - Highest to Lowest</p>
+                    <ol>
+                        <li>Polyend Tracker - $599.00 </li>
+                        <li>RØDECaster Duo - $499.00 </li>
+                        <li>Sennheiser HD 660S2 - $299.00 </li>
+                        <li>Novation FLkey 61 - $279.99 </li>
+                        <li>Kanto YU2 - $249.00</li>
+                        <li>Shure MV7 - $249.00</li>
+                        <li>Focusrite Scarlet 4i4 [3rd Gen] - $199.99</li>
+                    </ol>
+                    <p>Total price:
+                        <br>
+                        $2,374.98
+                    </p>
+                </div>
+                <div class="modal-footer" id="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Images Modal -->
+    <div class="modal fade" id="imagemodal" tabindex="-1" aria-labelledby="imagemodallabel" aria-hidden="true">
+        <div class="modal-dialog" id="image-dialog">
+            <div class="modal-content">
+                <div class="modal-header" id="modal-header">
+                    <h1 class="modal-title fs-1" id="description">Images Used</h1>
+                </div>
+                <div class="modal-body" id="imgbody">
+                    <img src="/images/focusrite414.jpg" class="img-img">
+                    <img src="/images/headphones.webp" class="img-img">
+                    <img src="/images/polyendtracker.jpg" class="img-img">
+                    <img src="/images/flkey61.jpg" class="img-img">
+                    <img src="/images/studiomonitors.jpg" class="img-img">
+                    <img src="/images/mixer.jpg" class="img-img">
+                    <br>
+                    <img src="/images/microphone.jpg" class="img-img">
+                </div>
+                <div class="modal-footer" id="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Buttons -->
+    <section id="toplayer">
+        <h2 class="lobster-two-regular">Welcome</h2>
+        <h2 class="lobster-two-regular">Description</h2>
+        <h2 class="lobster-two-regular">List of Items</h2>
+        <h2 class="lobster-two-regular">Images</h2>
+    </section>
+    <div class="modalbuttons">
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#welcomemodal">
+            <span class="material-symbols-outlined" id="wavingicon">
+                waving_hand
+            </span>
+        </button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#descriptionmodal">
+            <span class="material-symbols-outlined" id="wavingicon">
+                article
+        </button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#listmodal">
+            <span class="material-symbols-outlined" id="wavingicon">
+                format_list_bulleted
+        </button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#imagemodal">
+            <span class="material-symbols-outlined" id="imagesicon">
+                imagesmode
+            </span>
+        </button>
+    </div>
+    <footer></footer>
 </body>
+<script src="/scripts/index.js"></script>
 
 </html>

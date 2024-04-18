@@ -2,46 +2,117 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/styles/login.css">
-    <script src="/scripts/index.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/styles/cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
-    <header class="lobster-two-regular">
-        <nav class="nav__elements">
-            <section class="homestore">
-                <a href="home.html">Home</a>
-                <a href="store.html">Store</a>
-            </section>
-            <section class="searchbar">
-                <span class="material-symbols-outlined" id="magnifyicon">
-                    search
-                </span>
-                <div class="search">
-                    <input type="text" placeholder="Search" id="search" name="search">
-                </div>
-            </section>
-            <section class="accountinfo">
-                <a role="button" href="login.html">Login</a>
-                <a href="register.html">Register</a>
-                <section class="cart">
-                    <a class="material-symbols-outlined" id="carticon" href="cart.html">shopping_cart</a>
-                </section>
-            </section>
-        </nav>
-    </header>
+  <canvas></canvas>
+  <header class="lobster-two-regular">
+    <nav class="nav__elements">
+      <section class="homestore">
+        <a href="home.html">Home</a>
+        <a href="store.html">Store</a>
+      </section>
+      <section class="searchbar">
+        <span class="material-symbols-outlined" id="magnifyicon">
+          search
+        </span>
+        <div class="search">
+          <input type="text" placeholder="Search" id="search" name="search">
+        </div>
+      </section>
+      <section class="accountinfo">
+        <a role="button" href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <section class="cart">
+          <a class="material-symbols-outlined" id="carticon" href="cart.html">shopping_cart</a>
+        </section>
+      </section>
+    </nav>
+  </header>
+  <div class="checkoutinfo">
+    <table class="table table-bordered align-middle">
+      <thead>
+        <tr>
+          <th colspan="4" scope="col">Shopping Cart</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+          <th scope="row" class="tablenumber">1</th>
+          <td>
+            <div class="tableimage"><img alt="focusrite414" src="/images/focusrite414.jpg"></div>
+          </td>
+          <td><a href="store.html">Focusrite Scarlet 4i4 [3rd Gen]</a></td>
+          <td>$249.00</td>
+        </tr>
+        <tr>
+          <th scope="row" class="tablenumber">2</th>
+          <td>
+            <div class="tableimage"><img alt="flkey61" src="/images/flkey61.jpg"></div>
+          </td>
+          <td><a href="store.html">Novation FLkey61</a></td>
+          <td>$279.99</td>
+        </tr>
+        <tr>
+          <th scope="row" class="tablenumber">3</th>
+          <td>
+            <div class="tableimage"><img alt="headphones" src="/images/headphones.webp"></div>
+          </td>
+          <td><a href="store.html">Sennheiser HD 660S2</a></td>
+          <td>$299.00</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <th colspan="3">Total Price:</th>
+        <td>$827.99</td>
+      </tfoot>
+    </table>
+    <div class="shippingcontent">
+      <div class="shippingformat">
+        <h1 class="shippinglabel">Shipping Information</h1>
+        <form class="shippinginfo">
+          <div class="fullname">
+            <label for="validationCustom01" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="validationCustom01" required>
+            <div class="valid-feedback">
+            </div>
+          </div>
+          <div class="email">
+            <label for="validationCustom02" class="form-label">Email Address</label>
+            <input type="text" class="form-control" id="validationCustom02" required>
+          </div>
+          <div class="shippingaddress">
+            <label for="validationCustom03" class="form-label">Address</label>
+            <input type="text" class="form-control" id="validationCustom03" required>
+          </div>
+          <div class="shippingaddress">
+            <label for="validationCustom04" class="form-label">Card Number</label>
+            <input type="text" class="form-control" id="validationCustom04" required>
+          </div>
+        </form>
+        <button type="button" class="btn btn-dark" id="checkoutbtn">
+          <p>Checkout</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/scripts/index.js"></script>
+
+</html>

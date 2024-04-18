@@ -94,44 +94,71 @@ canvas{
   pointer-events: none;
 }
 
-.search input {
-  min-height: 25px;
-  height: 4vh;
-  width: 25vw;
+.checkoutinfo {
+  margin-top:10vh;
 }
+  .checkoutinfo table {
+    background-color: white;
+    font-size: 50px;
+    width: 25vw;
+    /* margin: auto; */
+    text-align: center;
+    box-shadow: 10px 10px rgb(43, 42, 42);
+    z-index: 0;
+    
+  }
 
-.card {
-  border: 3px solid black;
+  .shippingcontent{
+    display: flex;
+    z-index: 2;
+  }
+.tableimage img {
   width: 15rem;
-  display: inline-block;
-  margin: 5px 30px 30px 30px;
-  box-shadow: 12px 12px rgb(105, 105, 105);
-}
-
-.card-img-top {
-  border: 3px solid grey;
-  border-radius: 4rem;
-  height: 30vh;
+  height: 20vh;
   object-fit: contain;
 }
-
-.cardlist {
+.shippinginfo {
+  background-color: white;
+  padding: 15px;
+  border: 4px black solid;
   text-align: center;
+  box-shadow: 10px 7px;
+  width: 25vw;
+  height: 33ch;
 }
 
-.card-text {
-  display: grid;
-  place-items: center;
-  padding: 5px;
-  height: 230.8px;
-  border: 3px solid black;
-  border-radius: 10px;
+.checkoutinfo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+.table-bordered,
+.table-bordered th,
+.table-bordered td {
+  border-color: black;
+    border-width: 3px;
+
 }
 
-.card-text2 {
-  display: grid;
-  place-items: center;
-  height: 206.8px;
-  border: 3px solid black;
-  border-radius: 10px;
+td a{
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  font-size: x-large;
+  margin: 0;
+  padding: 20px;
+}
+
+
+#checkoutbtn {
+  margin: auto;  
+  display: flex;
+  margin-top: 50px;
+}
+
+ .shippinglabel {
+  text-align: center;
 }
