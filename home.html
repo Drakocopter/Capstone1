@@ -18,8 +18,9 @@
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="/styles/home.css">
+    <script src="/scripts/index.js"></script>
 </head>
 
 <body>
@@ -28,30 +29,30 @@
     <!-- Nav Bar -->
     <header class="lobster-two-regular">
         <nav class="nav__elements">
-            <section class="homestore">
+            <div class="homestore">
                 <a href="home.html">Home</a>
                 <a href="store.html">Store</a>
-            </section>
-            <section class="searchbar">
+            </div>
+            <div class="searchbar">
                 <span class="material-symbols-outlined" id="magnifyicon">
                     search
                 </span>
                 <div class="search">
                     <input type="text" placeholder="Search" id="search" name="search">
                 </div>
-            </section>
-            <section class="accountinfo">
+            </div>
+            <div class="accountinfo">
                 <a role="button" href="login.html">Login</a>
                 <a href="register.html">Register</a>
-                <section class="cart">
+                <div class="cart">
                     <a class="material-symbols-outlined" id="carticon" href="cart.html">shopping_cart</a>
-                </section>
-            </section>
+                </div>
+            </div>
         </nav>
     </header>
     <!-- Modals -->
     <!-- Welcome Modal -->
-    <div class="modal fade" id="welcomemodal" tabindex="-1" aria-labelledby="welcomemodallabel" aria-hidden="true">
+    <div class="modal fade" id="welcomemodal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header" id="modal-header">
@@ -67,11 +68,10 @@
         </div>
     </div>
     <!-- Description Modal -->
-    <div class="modal fade" id="descriptionmodal" tabindex="-1" aria-labelledby="descriptionmodallabel"
-        aria-hidden="true">
+    <div class="modal fade" id="descriptionmodal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header" id="modal-header">
+                <div class="modal-header" id="descriptionheader">
                     <h1 class="modal-title fs-1" id="description">Description</h1>
                 </div>
                 <div class="modal-body">
@@ -87,17 +87,17 @@
                     at the top to explore the different areas of the website. Thank you for visiting! I hope you
                     enjoy!
                 </div>
-                <div class="modal-footer" id="modal-footer">
+                <div class="modal-footer" id="descriptionfooter">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- List Modal -->
-    <div class="modal fade" id="listmodal" tabindex="-1" aria-labelledby="listmodallabel" aria-hidden="true">
+    <div class="modal fade" id="listmodal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header" id="modal-header">
+                <div class="modal-header" id="listheader">
                     <h1 class="modal-title fs-1" id="list">List of Items</h1>
                 </div>
                 <div class="modal-body">
@@ -116,30 +116,30 @@
                         $2,374.98
                     </p>
                 </div>
-                <div class="modal-footer" id="modal-footer">
+                <div class="modal-footer" id="listfooter">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- Images Modal -->
-    <div class="modal fade" id="imagemodal" tabindex="-1" aria-labelledby="imagemodallabel" aria-hidden="true">
+    <div class="modal fade" id="imagemodal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog" id="image-dialog">
             <div class="modal-content">
-                <div class="modal-header" id="modal-header">
-                    <h1 class="modal-title fs-1" id="description">Images Used</h1>
+                <div class="modal-header" id="imageheader">
+                    <h1 class="modal-title fs-1" id="images">Images Used</h1>
                 </div>
                 <div class="modal-body" id="imgbody">
-                    <img src="/images/focusrite414.jpg" class="img-img">
-                    <img src="/images/headphones.webp" class="img-img">
-                    <img src="/images/polyendtracker.jpg" class="img-img">
-                    <img src="/images/flkey61.jpg" class="img-img">
-                    <img src="/images/studiomonitors.jpg" class="img-img">
-                    <img src="/images/mixer.jpg" class="img-img">
+                    <img alt="focusrite414" src="/images/focusrite414.jpg" class="img-img">
+                    <img alt="headphones" src="/images/headphones.webp" class="img-img">
+                    <img alt="polyendtracker" src="/images/polyendtracker.jpg" class="img-img">
+                    <img alt="flkey61" src="/images/flkey61.jpg" class="img-img">
+                    <img alt="speakers" src="/images/studiomonitors.jpg" class="img-img">
+                    <img alt="mixer" src="/images/mixer.jpg" class="img-img">
                     <br>
-                    <img src="/images/microphone.jpg" class="img-img">
+                    <img alt="microphone" src="/images/microphone.jpg" class="img-img">
                 </div>
-                <div class="modal-footer" id="modal-footer">
+                <div class="modal-footer" id="imagesfooter">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -159,12 +159,14 @@
             </span>
         </button>
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#descriptionmodal">
-            <span class="material-symbols-outlined" id="wavingicon">
+            <span class="material-symbols-outlined" id="article">
                 article
+            </span>
         </button>
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#listmodal">
-            <span class="material-symbols-outlined" id="wavingicon">
+            <span class="material-symbols-outlined" id="format_list_bulleted">
                 format_list_bulleted
+            </span>
         </button>
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#imagemodal">
             <span class="material-symbols-outlined" id="imagesicon">
@@ -174,6 +176,5 @@
     </div>
     <footer></footer>
 </body>
-<script src="/scripts/index.js"></script>
 
 </html>

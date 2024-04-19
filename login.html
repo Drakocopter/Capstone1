@@ -17,8 +17,8 @@
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="/scripts/index.js"></script>
 </head>
 
 <body>
@@ -26,25 +26,25 @@
     </canvas>
     <header class="lobster-two-regular">
         <nav class="nav__elements">
-            <section class="homestore">
+            <div class="homestore">
                 <a href="home.html">Home</a>
                 <a href="store.html">Store</a>
-            </section>
-            <section class="searchbar">
+            </div>
+            <div class="searchbar">
                 <span class="material-symbols-outlined" id="magnifyicon">
                     search
                 </span>
                 <div class="search">
                     <input type="text" placeholder="Search" id="search" name="search">
                 </div>
-            </section>
-            <section class="accountinfo">
+            </div>
+            <div class="accountinfo">
                 <a role="button" href="login.html">Login</a>
                 <a href="register.html">Register</a>
-                <section class="cart">
+                <div class="cart">
                     <a class="material-symbols-outlined" id="carticon" href="cart.html">shopping_cart</a>
-                </section>
-            </section>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -60,19 +60,18 @@
                     <input type="text" class="form-control" id="validationCustomUsername"
                         aria-describedby="inputGroupPrepend" required>
                 </div>
+                <div class="mb-3 has-validation">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" required>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberme">
+                    <label class="form-check-label" for="rememberme">Remember Me</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
             </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="rememberme">
-                <label class="form-check-label" for="rememberme">Remember Me</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
         </form>
     </section>
 </body>
-<script src="/scripts/index.js"></script>
 
 </html>

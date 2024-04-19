@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext('2d');
 
@@ -94,3 +96,6 @@ function setupCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 }
+
+console.log("Document is ready!");
+});

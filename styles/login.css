@@ -28,7 +28,7 @@
       'FILL' 0,
       'wght' 400,
       'GRAD' 0,
-      'opsz' 24, ;
+      'opsz' 24;
 }
 
 body {
@@ -103,8 +103,8 @@ canvas {
 
 h1 {
   text-align: center;
-  font-size: 13vh;
-  margin-bottom: 10vh;
+  font-size: 6vw;
+  margin-bottom: 5vw;
 }
 
 .logininfo {
