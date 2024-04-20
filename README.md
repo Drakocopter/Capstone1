@@ -3,7 +3,7 @@ Ecommerce Site
 
 This is an ecommerce page I made to display musical equipment and devices, most of which I want myself. You could consider it my own personal wihslist. There is a brush trail on the mouse that I copied from someone else Javascript. Getting it to interact (or lack thereof) with the rest of my website took a bit of editing the Javascript.
 
-# Home Page [home](home.html)
+# Home Page [Click Here](home.html)
 I used modals to introduce the user to the webpage, provide a description,
 list the items of the page, and showcase the images used.
 
